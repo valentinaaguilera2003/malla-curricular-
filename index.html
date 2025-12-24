@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Interactiva - Trabajo Social</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
 
+    <header>
+        <h1>Malla Curricular: Trabajo Social</h1>
+        <p>Haz clic en un ramo para marcarlo como aprobado. Recuerda cumplir los requisitos.</p>
+        <button id="reset-btn">Reiniciar Progreso</button>
+    </header>
+
+    <main id="malla-container">
+        <div class="semestre" data-n="1">
+            <h2>Semestre 1</h2>
+            <div class="ramo" id="r1_1">Fundamentos del trabajo social</div>
+            <div class="ramo" id="r1_2">Personas y problemáticas sociales</div>
+            <div class="ramo" id="r1_3">Psicología del desarrollo</div>
+            <div class="ramo" id="r1_4">Taller de habilidades matemáticas</div>
+            <div class="ramo" id="r1_5">Taller de habilidades TIC</div>
+            <div class="ramo" id="r1_6">Taller de habilidades comunicativas</div>
+            <div class="ramo" id="r1_7">Iniciativa y gestión personal y social</div>
+        </div>
+
+        <div class="semestre" data-n="2">
+            <h2>Semestre 2</h2>
+            <div class="ramo" id="r2_1">Perspectivas contemporáneas en familias</div>
+            <div class="ramo" id="r2_2">Personas mayores</div>
+            <div class="ramo" id="r2_3">Niñez y juventud</div>
+            <div class="ramo" id="r2_4">Políticas públicas y sociales</div>
+            <div class="ramo" id="r2_5">Fundamentos socio jurídicos</div>
+            <div class="ramo" id="r2_6">Computación aplicada al trabajo social</div>
+            <div class="ramo" id="r2_7">Ética profesional</div>
+            <div class="ramo" id="r2_8">Comunicación profesional efectiva</div>
+        </div>
+
+        <div class="semestre" data-n="3">
+            <h2>Semestre 3</h2>
+            <div class="ramo" id="r3_1">Comunidades y organizaciones</div>
+            <div class="ramo" id="r3_2">Diversidad e inclusión</div>
+            <div class="ramo" id="r3_3">Perspectivas de género</div>
+            <div class="ramo" id="r3_4">Trabajo social y salud</div>
+            <div class="ramo" id="r3_5">Manejo de información social</div>
+            <div class="ramo" id="r3_6" data-req="r2_6">Integración de competencias 1</div>
+            <div class="ramo" id="r3_7">Innovación social</div>
+            <div class="ramo" id="r3_8">Orientación al empleo y emprendimiento</div>
+        </div>
+
+        <div class="semestre" data-n="4">
+            <h2>Semestre 4</h2>
+            <div class="ramo" id="r4_1">Taller de estrategias innovadoras</div>
+            <div class="ramo" id="r4_2">Taller de manejo grupal</div>
+            <div class="ramo" id="r4_3">Gestión de redes</div>
+            <div class="ramo" id="r4_4">Desarrollo socio territorial</div>
+            <div class="ramo" id="r4_5">T.S. en contextos educativos</div>
+            <div class="ramo" id="r4_6">Técnicas de recolección de info.</div>
+            <div class="ramo" id="r4_7" data-req="r3_6">Integración de competencias 2</div>
+            <div class="ramo" id="r4_8">Proyectos colaborativos de innovación</div>
+        </div>
+
+        <div class="semestre" data-n="5">
+            <h2>Semestre 5</h2>
+            <div class="ramo" id="r5_1">Habilidades directivas</div>
+            <div class="ramo" id="r5_2">Economía social</div>
+            <div class="ramo" id="r5_3">Evaluación para intervención social</div>
+            <div class="ramo" id="r5_4">Elementos teóricos y metodológicos</div>
+            <div class="ramo" id="r5_5">Estrategias resolución de conflictos</div>
+            <div class="ramo" id="r5_6">Métodos cuantitativos</div>
+            <div class="ramo" id="r5_7">Cultura y valores</div>
+        </div>
+
+        <div class="semestre" data-n="6">
+            <h2>Semestre 6</h2>
+            <div class="ramo" id="r6_1">Planificación y gestión social</div>
+            <div class="ramo" id="r6_2">Gestión de personal y beneficios</div>
+            <div class="ramo" id="r6_3" data-req="r5_4">Prácticas de diagnóstico</div>
+            <div class="ramo" id="r6_4">Métodos cualitativos</div>
+            <div class="ramo" id="r6_5">Creatividad e innovación</div>
+        </div>
+
+        <div class="semestre" data-n="7">
+            <h2>Semestre 7</h2>
+            <div class="ramo" id="r7_1">Administración de residencias</div>
+            <div class="ramo" id="r7_2">Intervención psicosocial</div>
+            <div class="ramo" id="r7_3">Análisis crítico problemáticas</div>
+            <div class="ramo" id="r7_4">Observatorios de fenómenos</div>
+            <div class="ramo" id="r7_5">Sistematización aplicada</div>
+            <div class="ramo" id="r7_6" data-req="r4_7">Integración de competencias 3</div>
+            <div class="ramo" id="r7_7">Proyecto colaborativo avanzado</div>
+        </div>
+
+        <div class="semestre" data-n="8">
+            <h2>Semestre 8</h2>
+            <div class="ramo" id="r8_1" data-req="r7_6">Actividad de titulación</div>
+            <div class="ramo" id="r8_2" data-req="r6_3">Práctica profesional</div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
