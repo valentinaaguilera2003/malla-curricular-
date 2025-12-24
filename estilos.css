@@ -1,1 +1,97 @@
+:root {
+    --fucsia-main: #d81b60;
+    --fucsia-hover: #ad1457;
+    --rosa-pastel: #f8bbd0;
+    --texto-aprobado: #880e4f;
+    --bg-page: #fdf2f8;
+    --border-color: #f48fb1;
+}
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-page);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 { color: var(--fucsia-main); }
+
+#reset-btn {
+    background-color: var(--fucsia-main);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#reset-btn:hover { background-color: var(--fucsia-hover); }
+
+/* Contenedor de Malla */
+#malla-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Columnas de Semestres */
+.semestre {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    width: 280px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.semestre h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--fucsia-main);
+    border-bottom: 2px solid var(--rosa-pastel);
+    padding-bottom: 10px;
+}
+
+/* Tarjetas de Ramos */
+.ramo {
+    background-color: var(--fucsia-main);
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+.ramo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(216, 27, 96, 0.3);
+}
+
+/* Estado Aprobado */
+.ramo.aprobado {
+    background-color: var(--rosa-pastel);
+    color: var(--texto-aprobado);
+    text-decoration: line-through;
+    border: 1px dashed var(--fucsia-main);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .semestre {
+        width: 100%;
+    }
+}
